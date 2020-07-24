@@ -1,4 +1,4 @@
-from flask import flask
+from flask import Flask, render_template, url_for, request, redirect
 
 
 app = Flask(__name__)
@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    print("f u")
+    return render_template('index.html')
 
 
 if __name__ == "__main__":
